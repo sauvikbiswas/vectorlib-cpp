@@ -32,9 +32,7 @@ ostream& operator<< (ostream& os, const vector a) {
     return os;
 } 
 
-// Unary Operators - typecast, abs, double, neg, pos
-
-
+// Unary Operators - typecast, neg, pos
 vector vector::operator+ () {
     vector v;
     for (int i=0; i<3; i++) v.data[i] = data[i];
@@ -139,11 +137,7 @@ bool operator<= (vector a, vector b) {
 bool operator>= (vector a, vector b) {
     return not(double(a) < double(b));
 }
-// Not implemented / not applicable
 
-
-// Non native methods
-// Numpy methods
 int main(int argc, char *argv[]) {
     int ac = 6;
     vector a(0.1,3.5,6.7);
